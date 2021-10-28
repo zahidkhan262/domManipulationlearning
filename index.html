@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation in javscript</title>
+    <style>
+        input,
+        button {
+            margin: 20px;
+            border: 1px solid #3d8c92;
+            outline: 0px;
+            padding: 10px 20px;
+            color: #000;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="input-1" value="" placeholder="Name">name: <span id="username"></span>
+    <input type="password" id="input-2" placeholder="password">password: <span id="password"></span>
+
+    <button class="btn" onclick="submitData()">Submit</button>
+
+
+    <script>
+        let submitData = () => {
+
+            let inputData1 = document.getElementById('input-1').value;
+            let inputData2 = document.getElementById('input-2').value;
+            let userName = document.getElementById('username');
+            let userPassword = document.getElementById('password');
+
+            userName.innerText = inputData1;
+            userPassword.innerText = inputData2;
+
+            console.log(inputData1)
+
+        }
+
+    </script>
+
+</body>
+
+</html>
